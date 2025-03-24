@@ -51,7 +51,7 @@ nav .effect::before{
     left: 0;
     bottom: 0;
     height: var(--w-h-item);
-    width: var(--position-x-active);
+    width: calc(var(--position-x-active) - 10px);
     background-color: #fff;
     content: '';
     border-top-right-radius: 30px;
@@ -63,7 +63,7 @@ nav .effect::after{
     right: 0;
     bottom: 0;
     height: var(--w-h-item);
-    width: var(--position-x-active);
+     /* width: var(--position-x-active);  */
     background-color: #fff;
     content: '';
     width: calc(100% - var(--position-x-active) - var(--w-h-item) - 10px);
@@ -79,6 +79,19 @@ nav .effect .circle{
     left: var(--position-x-active);
     border-radius: 50%;
     box-shadow: 0 20px 20px #5555;
+    transition: 0.5s;
+}
+
+nav .effect .circle::before{
+    position: absolute;
+    left: -10px;
+    right: -10px;
+    content: '';
+    height: 100%;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 0 50px 0 30px #fff;
+    bottom: -10px;
     transition: 0.5s;
 }
 
